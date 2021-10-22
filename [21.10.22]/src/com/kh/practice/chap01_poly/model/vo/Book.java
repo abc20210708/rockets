@@ -42,11 +42,12 @@ public class Book {
         this.publisher = publisher;
     }
 
+    @Override
     public String toString() {
-        return "Book{" +
+        return "Book[" +
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
-                '}';
+                ']';
     }
 }//end class

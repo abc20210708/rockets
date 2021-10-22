@@ -5,6 +5,8 @@ public class AniBook extends Book {
     private int accessAge; //제한나이
 
     public AniBook() {
+
+
     }
 
     public AniBook(String title, String author, String publisher, int accessAge) {
@@ -22,8 +24,8 @@ public class AniBook extends Book {
 
     @Override
     public String toString() {
-        return "AniBook{" +
+        return "AniBook[" + super.toString() +
                 "accessAge=" + accessAge +
-                '}';
+                ']';
     }
 }//end class
