@@ -31,9 +31,7 @@ public class LibraryController {
     }
 
     public Book[] selectAll() {
-        for (int i = 0; i < bList.length; i++) {
-            System.out.println(i+"번 도서 : " + bList[i]);
-        }
+
         return bList;
 
     }
@@ -59,8 +57,21 @@ public class LibraryController {
 
     public int rentBook(int index) {
 
-        return 0;
+        int result = 0;
+        if (bList[index] instanceof AniBook && mem.getAge() <=(((AniBook) bList[index]).getAccessAge())) {
+            result = 1;
+        }
+
+        if (bList[index] instanceof CookBook && ((CookBook)bList[index]).isCoupon()) {
+            mem.setCouponCount(mem.getCouponCount()+1);
+            result = 2;
+        }
+
+
+
+        return result;
     }
+
 
 
 

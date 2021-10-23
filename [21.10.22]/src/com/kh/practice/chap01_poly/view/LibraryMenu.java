@@ -45,12 +45,14 @@ public class LibraryMenu {
                    lc.selectAll();
                    break;
                case 3:
-                   System.out.print("검색할 제목 키워드 : ");
-                   String key = sc.next();
-                   lc.searchBook(key);
+                  searchBook();
                    break;
                case 4:
-                   //lc.rentBook();
+                   lc.selectAll();
+                   System.out.print("대여할 도서 번호 선택 : ");
+                   int num = sc.nextInt();
+                   sc.nextLine();
+                   lc.rentBook(num);
                    break;
                case 9:
                    return;
@@ -68,12 +70,16 @@ public class LibraryMenu {
    public void selectAll() {
       Book[] b = lc.selectAll();
        for (int i = 0; i < b.length; i++) {
-           System.out.println(b[i]);
+           System.out.println(i+"번째 도서 : "+b[i].toString());
        }
 
    }
 
    public void searchBook() {
+       System.out.print("검색할 제목 키워드 : ");
+       String key = sc.next();
+       Book[] searchList = lc.searchBook(key);
+
 
    }
 
