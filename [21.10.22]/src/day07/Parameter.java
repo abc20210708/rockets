@@ -37,6 +37,8 @@ public class Parameter {//
         varargs 또는 가변인자라고 하며 OrderItem이 0개부터 여러개 까지 매개변수로 올수있는걸 뜻한다.
         여러개의 매개변수를 받아서 사용할떄는 for문을 사용하고 항상 배열로 매개변수를 담지 않아도 된다.
         대신 항상 마지막에만 쓸수있다.
+
+        참고 블로그 https://nect2r.tistory.com/60
         */
 
 
